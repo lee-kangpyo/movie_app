@@ -1,37 +1,42 @@
 import React from 'react';
 
-function Food({ fav }){
-  return <h1>I like {fav}</h1>
+function Food({ name, img }){
+  return (
+    <div>
+      <h2>I like {name}</h2>
+      <img src = {img}/>
+    </div>
+
+  )
 }
 
 const foodILike = [
   {
     name:"김치",
-    image:"https://www.google.com/search?q=%EA%B9%80%EC%B9%98&sxsrf=ALeKk02gnUBnBkNTnvF2Ok9-Il0X1eL5mw:1627605074113&tbm=isch&source=iu&ictx=1&fir=Z4u2cFmtMTy4aM%252CZjMQxtyXjkglKM%252C%252Fm%252F018dz_&vet=1&usg=AI4_-kSZKFDb1Jp7Xx1DEGx5Qhd53RNwnA&sa=X&ved=2ahUKEwiboZuyxYnyAhUQZt4KHUmdBLYQ_B16BAg_EAE#imgrc=Z4u2cFmtMTy4aM",
+    image:"https://www.bgw.kr/wp-content/uploads/2019/12/%ED%8F%AC%EA%B8%B0%EA%B9%80%EC%B9%98-1200x1200.png",
   },
   {
     name:"삼겹살",
-    image:"https://www.google.com/search?q=%EC%82%BC%EA%B2%B9%EC%82%B4&sxsrf=ALeKk012Wc5g-RDYFMuMOvqMd4NpgnUU4w:1627605124458&tbm=isch&source=iu&ictx=1&fir=n0N7K_dsJm80aM%252ClHAo8SAI3h1DlM%252C%252Fg%252F11bc58gmwd&vet=1&usg=AI4_-kSNg_PbzH0xqK5WlskpnVIwpmMDGg&sa=X&ved=2ahUKEwiEgJzKxYnyAhWSDd4KHValAR4Q_B16BAgsEAE#imgrc=n0N7K_dsJm80aM"
+    image:"https://w.namu.la/s/16c62517c7af89b2adc7f4841488292f142d5d99d8d9ea762b5fe757aa0cffd4fc71380f8a6179109683ec9419a66b77e999f949b18282e3e59e2b829fe7d70f28fd91e49b7248f621c4af9701889c39a72ec4f718b6f752d9277f87dfc508207e4231fb4c016620198f8cc0c47db678"
   },
   {
     name:"비빔밥",
-    image:"https://www.google.com/search?q=%EB%B9%84%EB%B9%94%EB%B0%A5&sxsrf=ALeKk01rhYRGTKjHAFH3JQkF6KxuJtroxg:1627605143734&tbm=isch&source=iu&ictx=1&fir=Fz_8GHM6ze9U8M%252CLLx6Fq5KFqTvRM%252C%252Fm%252F03g917&vet=1&usg=AI4_-kQc_maNIM6E0ECKjazrPOxW0GAM4A&sa=X&ved=2ahUKEwid1rTTxYnyAhXSEYgKHWAXAVUQ_B16BAgoEAE#imgrc=Fz_8GHM6ze9U8M"
+    image:"https://w.namu.la/s/02034f3c4f5bce39b228d9e368727f091d03ac093efec038a1bcd28f1d046eacfc918db2fad3d98bdda454966eb61895654f4ec4e68a4c35de5a337759028cc4c7a30a8967c6040d8996d12f4d3d78bed5968ae843202ede49a6e550fae5c138415252a195f09bc3df4bd84c9d00d37e"
   },
   {
     name:"돈까스",
-    image:"https://www.google.com/search?q=%EB%8F%88%EA%B9%8C%EC%8A%A4&sxsrf=ALeKk00szM7Ak7xGCsMU4bJhvdUQOJcT0w:1627605165480&tbm=isch&source=iu&ictx=1&fir=nO364Mo4-yBWFM%252CwSDB0BPDdctn-M%252C%252Fm%252F0f99t&vet=1&usg=AI4_-kQrAWfk4EQOCSPrbWrcBjc4dfszdQ&sa=X&ved=2ahUKEwja7OPdxYnyAhUbMN4KHb6IAbQQ_B16BAgwEAE#imgrc=nO364Mo4-yBWFM"
+    image:"https://w.namu.la/s/2ceb50c734a752d27b67846e19a4d0c82830692576da4e9028cc58278b6b23ab07a3df76d84a15f8017dfca3940fa9a79479c00c3e7334139c49b03efdc43895c7471204c697d3ebc44cf51874eabfc5f3dbd566963ba435bc868c2b20f32a5e0f5df5726e9e08abe2f9dbdef5bed490"
   },
   {
     name:"김밥",
-    image:"https://www.google.com/search?q=%EA%B9%80%EB%B0%A5&sxsrf=ALeKk03j3QLA-ZDHx9mX7EyFJnTzXsCM6w:1627605180552&tbm=isch&source=iu&ictx=1&fir=cAGh_3mzWwfySM%252CZLa-Qodd5xS7vM%252C%252Fm%252F048wsd&vet=1&usg=AI4_-kQKCzVoLeb4ZxOQgrr8aH4eEa9_bQ&sa=X&ved=2ahUKEwjr0PvkxYnyAhXSzmEKHTOFACkQ_B16BAgyEAE#imgrc=cAGh_3mzWwfySM"
+    image:"https://ww.namu.la/s/33c9509d550db600898d73c2583211037408f060b2d4f8748fb39d34c8159a2e9867520fb83885e0dbe2ab3884f98c12ed4d9892ea11f54802ab2915170378819e97494089967aff31be4f5b0055caab60654dbaf574ab4059cc5b383b7f8e75"
   },
 ];
 
 function App() {
-  //return <div className="App" />;
   return (
     <div>
-      <h1>Hello</h1>
+      {foodILike.map(dish => {return <Food name={dish.name} img = {dish.image} />})}
     </div>
   );
 }
