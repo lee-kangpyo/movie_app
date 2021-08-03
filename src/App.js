@@ -62,6 +62,11 @@ Food.propTypes = {
 }*/
 
 class App extends React.Component{
+  constructor(props){
+    super(props);
+    console.log('constructor() 실행 됨');
+  }
+
   state = {
     count:0
   }
@@ -80,6 +85,7 @@ class App extends React.Component{
   }
 
   render(){
+    console.log('render() 실행 됨');
     return (
         <div>
           <h1>The number is: {this.state.count}</h1>
