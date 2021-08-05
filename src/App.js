@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+
 import axios from 'axios';
 
 
@@ -16,8 +16,8 @@ class App extends React.Component{
   }
 
   getMovies = async () => {
-    const movies = await axios.get("https://yts.mx/api/v2/list_movies.json");
-    console.log(movies);
+    const {data:{data:{movies}}} = await axios.get("https://yts.mx/api/v2/list_movies.json");
+    this.setState({movies, isLoading:false}) // 키와 값의 변수 이름이 같으면 키값을 생략가능하다.
   }
 
 
