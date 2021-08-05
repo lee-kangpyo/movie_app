@@ -1,15 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-function Moive(){
-  return <h1></h1>
+function Movie({id, title, year, summary, poster}){
+  return <h1>{title}</h1>
 }
 
-Moive.propTypes = {
+Movie.propTypes = {
   id:PropTypes.number.isRequired,
   title:PropTypes.string.isRequired,
   summary:PropTypes.string.isRequired,
   poster:PropTypes.string.isRequired,
 };
 
-export default Moive;
+export default Movie;
