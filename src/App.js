@@ -25,11 +25,11 @@ class App extends React.Component{
 
   render(){
     const { isLoading, movies } = this.state;
-    console.log(movies)
+
     return ( <div>{isLoading
               ?"Loading..."
               :movies.map((item)=>{
-                return<Movie id={item.id} year = {item.year} title={item.title} summary={item.summary} poster={item.medium_cover_image}/>;
+                return<Movie key={item.id} id={item.id} year = {item.year} title={item.title} summary={item.summary} poster={item.medium_cover_image}/>;
               })}</div> )
   }
 }
