@@ -1,12 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import './css/Movie.css'
 
-function Movie({id, title, year, summary, poster}){
+function Movie({title, year, summary, poster}){
   return (
     <div class="movie">
       <img src={poster} alt={title} title={title}/>
       <div class="movie__data">
-        <h3 class="moive__title">{title}</h3>
+        <h3 class="moive__title" style={{ backgroundColor: 'red'}} >{title}</h3>
         <h5 class="moive__year">{year}</h5>
         <p class="moive__summary">{summary}</p>
       </div>
@@ -15,7 +16,6 @@ function Movie({id, title, year, summary, poster}){
 }
 
 Movie.propTypes = {
-  id:PropTypes.number.isRequired,
   title:PropTypes.string.isRequired,
   summary:PropTypes.string.isRequired,
   poster:PropTypes.string.isRequired,
