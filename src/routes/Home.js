@@ -3,7 +3,7 @@ import React from 'react';
 import axios from 'axios';
 import Movie from '../components/Movie';
 import '../css/Home.css'
-
+import Loader from '../components/Loader';
 
 class Home extends React.Component{
   state = {
@@ -27,18 +27,20 @@ class Home extends React.Component{
   render(){
     const { isLoading, movies } = this.state;
 
-    return (<section className="container">
+    return (
+            <section className="container">
               {isLoading ? (
-                <div className="loader"><span>Loading...</span></div>
+                <Loader className="loader" type="spin" color="red" message= "영화 데이터 가져오는중" />
               ) : (
                 <div className="movies">
                   {movies.map( item => (
                     <Movie key={item.id} id={item.id} year = {item.year} title={item.title} summary={item.summary} poster={item.medium_cover_image} genres={item.genres}/>
                   ))}
                 </div>
-              )}
 
-            </section> )
+              )}
+            </section>
+          )
   }
 }
 

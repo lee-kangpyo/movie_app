@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import './Movie.css'
 import {Link} from 'react-router-dom';
 
+
 function Movie({title, year, summary, poster, genres}){
   return (
     <div className="movie">
